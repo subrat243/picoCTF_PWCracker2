@@ -1,13 +1,13 @@
 # Hex to ASCII Converter (CTF Utilities)
 
-Utilities created for solving CTF challenges such as PW Crack 2 where encoded values (hex / 0x hex) must be converted to readable ASCII during password or flag analysis.
+Utilities created for solving picoCTF challenges such as PW Crack 2 where encoded values (hex / 0x hex) must be converted to readable ASCII during password or flag analysis.
 
 ---
 
 # Project Structure
 
 ```
-hex-to-ascii/
+picoCTF_PWCracker2_Scripts/
 ├─ README.md
 ├─ python/
 │  ├─ hex_to_ascii_plain.py
@@ -96,30 +96,6 @@ MIT License
 
 ---
 
-# File: python/hex_to_ascii_plain.py
-
-```python
-#!/usr/bin/env python3
-
-hex_string = input("Enter hex string: ").strip().replace(" ", "")
-
-try:
-    ascii_text = bytes.fromhex(hex_string).decode('ascii')
-    print("ASCII:", ascii_text)
-except ValueError:
-    print("Invalid hex input")
-```
-
----
-
-# File: python/hex_to_ascii_0x.py
-
-```python
-#!/usr/bin/env python3
-import re
-
-hex_input = input("Enter hex values: 
----
 
 # File: bash/hex_to_ascii_plain.sh
 
